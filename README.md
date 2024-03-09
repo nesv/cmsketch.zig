@@ -12,7 +12,7 @@ const testing = @import("std").testing;
 test {
   var est = Estimator.init();
   try testing.expect(est.increment("foo", 1) == 1);
-  try testing.expect(est.incrementBy("bar") == 17);
+  try testing.expect(est.incrementBy("bar", 17) == 17);
 
   try testing.expect(est.get("foo") == 1);
   try testing.expect(est.get("bar") == 17);
